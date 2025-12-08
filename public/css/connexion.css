@@ -1,0 +1,275 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        
+        body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        }
+        
+        
+        .container {
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .platform-name {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+        span{
+           color: #FFD700;
+        }
+        
+        .platform-subtitle {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        .login-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            
+        }
+        
+        .login-title {
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: 600;
+            font-size: 42px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: #666;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: solid 1px;
+        }
+        
+        .input-field::placeholder {
+            color:#666;
+        }
+        
+        .input-field:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        
+
+        .checkbox-container {        
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .checkbox-container input {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+        }
+        
+        .checkbox-label {
+            font-size: 14px;
+        }
+        
+        .forgot-password {
+            text-align: right;
+            margin-bottom: 25px;
+        }
+        
+        .forgot-password a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .forgot-password a:hover {
+            color: #5dade2;
+            text-decoration: underline;
+        }
+        
+        .divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.2);
+            margin: 25px 0;
+        }
+        
+        .login-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            background-color: #FFD700;
+            color: #333;
+            font-weight: 600;
+            width: 340px;
+            
+        }
+        
+        .login-btn:hover {
+            background-color: #FFC700;
+        }
+        
+        
+        .register-link {
+            text-align: center;
+            margin: 20px 0 30px;
+            font-size: 14px;
+        }
+        
+        .register-link a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        
+        
+        
+        /* Modal Mot de passe oublié */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .input-field1{
+            width: 100%;
+            padding: 15px;
+            background: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: #666;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: solid 1px;
+        }
+        
+        .modal-content {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            border-radius: 15px;
+            width: 90%;
+            max-width: 450px;
+            padding: 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            position: relative;
+            animation: modalFadeIn 0.4s ease;
+        }
+        
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.7);
+            transition: color 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            color: white;
+        }
+        
+        .modal-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 22px;
+            color: white;
+        }
+        
+        .modal-text {
+            margin-bottom: 20px;
+            text-align: center;
+            opacity: 0.9;
+            line-height: 1.5;
+            color: white;
+        }
+        
+        .modal-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #FFD700;
+            color: black;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background 0.3s ease;
+        }
+        
+        .modal-btn:hover {
+            background-color: #FFC700;
+        }
+        
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 15px;
+            background: rgb(235, 230, 230);
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 1px solid #fdf9f9;
+        }
+        
+        @media (max-width: 480px) {
+            .login-box {
+                padding: 20px;
+            }
+            
+            .social-buttons, .social-row {
+                flex-direction: column;
+            }
+            
+            .social-btn {
+                margin: 5px 0;
+            }
+            
+            .modal-content {
+                padding: 20px;
+            }
+        }

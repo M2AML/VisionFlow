@@ -1,0 +1,106 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: white;
+        }
+
+        .container1 {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            margin-top: 150px;
+            margin-left: 420px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-align: center;
+            color: black;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+            color: #333;
+        }
+
+        input[type="email"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #666;
+        }
+
+        input::placeholder {
+            color: #999;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        button {
+            flex: 1;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+
+        .btn-submit {
+            background-color: #FFD93D;
+            color: black;
+        }
+
+        .btn-submit:hover {
+            background-color: #FFC93D;
+            
+        }
+
+        nav{
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        
+        }
+
+        .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        margin-left: 100px;
+        padding: 20px 0;
+        
+        }
+
+        .logo span {
+        color: #FFD700;
+        }
