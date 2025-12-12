@@ -112,11 +112,12 @@
         .container {
             max-width: 400px;
             background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
             margin-left: 270px;
             margin-top: 20px;
+        }
+        #event{
+            color: #FFC700;
         }
 
         .event-name {
@@ -144,9 +145,18 @@
         }
 
         .participant-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .events-container{
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 20px;
+            min-width: 300px;
         }
 
         .participant-item {

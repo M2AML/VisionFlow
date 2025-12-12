@@ -265,7 +265,8 @@ h1 {
 }
 
 .events-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
@@ -273,6 +274,7 @@ h1 {
     background-color: white;
     border-radius: 12px;
     padding: 30px;
+    width: 250px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s, box-shadow 0.2s;
             

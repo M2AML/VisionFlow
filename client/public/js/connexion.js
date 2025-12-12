@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
             // Éléments du DOM
             const showPasswordCheckbox = document.getElementById('show-password');
-            const passwordField = document.getElementById('password');
+            const passwordField = document.getElementById('motpasse');
             const forgotPasswordLink = document.getElementById('forgot-password-link');
             const forgotPasswordModal = document.getElementById('forgotPasswordModal');
             const closeModal = document.getElementById('closeModal');
             const resetPasswordForm = document.getElementById('resetPasswordForm');
             const successMessage = document.getElementById('successMessage');
-            const loginForm = document.getElementById('loginForm');
+            const loginForm = document.getElementById('loginFormC');
             
             // Gestion de l'affichage du mot de passe
             showPasswordCheckbox.addEventListener('change', function() {
@@ -52,10 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             // Soumission du formulaire de connexion
-            loginForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Connexion simulée avec succès!');
-            });
             
             // Fonction pour réinitialiser le formulaire
             function resetForm() {
