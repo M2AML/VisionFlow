@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (!user || !token) {
         alert("Vous devez être connecté pour voir vos événements");
-        window.location.href = "compte.html";
+        window.location.href = "connexion";
         return;
     }
 

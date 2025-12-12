@@ -1,0 +1,68 @@
+VisionFlow est une application permettant de créer des événements, de gérer les inscriptions et d’afficher la liste des participants.
+
+# PRÉREQUIS
+
+# Avant d’utiliser le projet, installer :
+
+. Node.js
+
+. MongoDB (local ou MongoDB Atlas)
+
+. Git
+
+# CLONAGE DU PROJET
+
+Ouvre ton terminal puis exécute :
+
+git clone https://… (lien de ton dépôt Git)
+cd VisionFlow
+
+# INSTALLER LES DÉPENDANCES DU SERVEUR
+
+Dans ton terminal :
+
+cd serveur
+npm install
+
+# CRÉER LA BASE DE DONNÉES
+
+Dans MongoDB, crée une base nommée :
+
+Base de données : vision
+
+Créer ensuite 3 collections :
+
+. users
+
+. events
+
+. insevents
+
+# CRÉER LE FICHIER .env DANS LE DOSSIER serveur
+
+Exemple de configuration :
+
+PORT=3000
+MONGO_URL=mongodb://localhost:27017/vision
+JWT_SECRET=tonsecret
+
+PORT : choisissez votre port (3000 par défaut)
+
+MONGO_URL : chemin de votre base de données
+
+JWT_SECRET : un code secret de votre choix
+
+# LANCER LE SERVEUR
+
+Dans le terminal :
+
+cd serveur (si vous n’êtes pas déjà dedans)
+npm run dev
+
+# ACCÉDER À L’APPLICATION
+
+Ouvrez votre navigateur et allez sur :
+
+http://localhost:3000
+
+(3000 = le port que vous avez défini. Si vous l’avez changé, mettez celui que vous avez utilisé.)

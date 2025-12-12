@@ -34,7 +34,16 @@ const eventSchema = new mongoose.Schema({
         ref: "User",
         required: true,
     }
-}, { timestamps: true });
+},
+{ toJSON: { virtuals: true }, toObject: { virtuals: true } });
+
+// Virtual populate pour les participants
+eventSchema.virtual("participants", {
+    ref: "InsEvent",       // Modèle à peupler
+    localField: "_id",     // Champ de Event
+    foreignField: "id_event", // Champ de InsEvent qui référence Event
+},
+{ timestamps: true });
 
 
 export default mongoose.model("Event", eventSchema)

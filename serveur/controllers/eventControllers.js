@@ -93,3 +93,27 @@ export const getEventsByUser = async (req, res) => {
         res.status(500).json({ errorMessage: error.message });
     }
 };
+
+export const getMyEventsWithParticipants = async (req, res) => {
+    try {
+        const { id_user } = req.params; // ✔️ Récupérer l'ID dans l'URL
+        console.log("PARAMS :", req.params);
+
+        if (!id_user) {
+            return res.status(400).json({ message: "id_user manquant" });
+        }
+
+        const events = await Event.find({ id_user })
+            .populate("participants")
+            .exec();
+
+        res.status(200).json(events);
+
+    } catch (error) {
+        console.error("Erreur serveur:", error);
+        res.status(500).json({ message: "Erreur serveur" });
+    }
+};
+
+
+

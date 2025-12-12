@@ -39,7 +39,7 @@ document.getElementById("creactForm").addEventListener("submit", async function(
         const data = await response.json();
 
         if (response.ok) {
-            window.location.href = "listeeve.html";
+            window.location.href = "listeeve";
         } else {
             document.getElementById("message").innerText = data.message || "Erreur lors de la création de l'évènement";
         }

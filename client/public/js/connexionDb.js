@@ -25,7 +25,7 @@ document.getElementById("loginFormC").addEventListener("submit", async function(
             
 
             // Redirection
-            window.location.href = "accueil.html";
+            window.location.href = "/";
         } else {
             document.getElementById("message").innerText = data.message || "Erreur lors de la connexion";
         }

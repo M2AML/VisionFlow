@@ -30,9 +30,9 @@ document.getElementById("creeEvent").addEventListener("click", () => {
     const user = JSON.parse(localStorage.getItem("user"));
     
     if(user) {
-        window.location.href = "creation.html";
+        window.location.href = "creation";
     }else{
-        window.location.href = "compte.html";
+        window.location.href = "compte";
     }
 
 });
@@ -42,9 +42,9 @@ document.querySelectorAll(".lien2").forEach(btn => {
         const user = JSON.parse(localStorage.getItem("user"));
 
         if (user) {
-            window.location.href = "creation.html";
+            window.location.href = "creation";
         } else {
-            window.location.href = "compte.html";
+            window.location.href = "compte";
         }
     });
 });
@@ -54,9 +54,9 @@ document.querySelectorAll(".primary").forEach(btn => {
         const user = JSON.parse(localStorage.getItem("user"));
 
         if (user) {
-            window.location.href = "creation.html";
+            window.location.href = "creation";
         } else {
-            window.location.href = "compte.html";
+            window.location.href = "compte";
         }
     });
 });
@@ -115,53 +115,20 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </div>
                 </div>
 
-                <a href="inscrip.html"><button class="rejoin-btn">Rejoindre</button></a> `;
+                <button class="rejoin-btn" data-id="${event._id}">Rejoindre</button>`;
 
             container.appendChild(card);
-             // Ajouter l'événement au bouton
-            // Ajouter l'événement au bouton "Rejoindre"
-rejoin-btn.addEventListener("click", async function(e) {
-    e.preventDefault(); // Sécuriser même si c'est un bouton
+            
+            document.querySelectorAll(".rejoin-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const eventId = btn.getAttribute("data-id");
 
-    // Récupérer l'utilisateur connecté et le token
-    const user = JSON.parse(localStorage.getItem("user"));
-    const token = localStorage.getItem("token");
+        // Stocker l'ID dans le localStorage
+        localStorage.setItem("selectedEventId", eventId);
 
-    if (!user || !token) {
-        alert("Vous devez être connecté pour vous inscrire !");
-        return;
-    }
-
-    // id_user et id_event dynamiques
-    const id_user = user._id;
-    const id_event = event._id;
-
-    try {
-        const response = await fetch(`http://localhost:3000/api/insEvent/${id_user}/${id_event}`, {
-            method: "POST",
-            headers: { 
-                "Content-Type": "application/json",
-                "Authorization": "Bearer " + token // 🔥 token si besoin
-            },
-            body: JSON.stringify({
-                email: user.email
-            })
-        });
-
-        const data = await response.json();
-
-        if (response.ok) {
-            alert("Inscription réussie !");
-            joinBtn.innerText = "Inscrit ✅";  // Modifier le texte du bouton
-            joinBtn.disabled = true;          // Désactiver le bouton
-        } else {
-            alert(data.message || "Erreur lors de l'inscription");
-        }
-
-    } catch (error) {
-        console.error(error);
-        alert("Serveur injoignable");
-    }
+        // Redirection vers la page détails/inscription
+        window.location.href = "inscrip";
+    });
 });
 
 

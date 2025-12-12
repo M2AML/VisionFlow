@@ -17,7 +17,7 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
             localStorage.setItem("user", JSON.stringify({
         email: email}));
         
-        window.location.href = "listeeve.html";
+        window.location.href = "connexion";
     } else {
         
         document.getElementById("message").innerText = data.message || "Erreur lors de l'inscription";
