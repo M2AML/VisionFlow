@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforme - Connexion</title>
+    <link rel="stylesheet" href="../public/css/connexion.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="platform-name">Vision<span>Flow</span></div>
+            <div class="platform-subtitle">Organisez vos événements avec facilité et clarté</div>
+        </div>
+        
+        <div class="login-box">
+            <h2 class="login-title">CONNEXION</h2>
+            
+            <form id="loginFormC">
+                <div class="form-group">
+                    <input type="email" class="input-field" id="email" placeholder="Email" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" class="input-field" id="motpasse" placeholder="Mot de passe" required>
+                </div>
+                
+                <div class="checkbox-container">
+                    <input type="checkbox" id="show-password">
+                    <label for="show-password" class="checkbox-label">Mot de passe visible</label>
+                </div>
+                
+                <div class="forgot-password">
+                    <a href="#" id="forgot-password-link">Mot de passe oublié ?</a>
+                </div>
+                
+                <button type="submit" class="login-btn">Se Connecter</button>
+            </form>
+            
+            <div class="divider"></div>
+            
+            <div class="register-link">
+                J'ai pas de compte, <a href="../views/compte.html">Créer Compte</a>
+            </div>
+            <p id="message" style="color: red;"></p>
+        </div>
+    </div>
+    
+    <!-- Modal Mot de passe oublié -->
+    <div class="modal" id="forgotPasswordModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2 class="modal-title">Mot de passe oublié</h2>
+            <p class="modal-text">Entrez votre adresse email pour réinitialiser votre mot de passe. Vous recevrez un lien de réinitialisation par email.</p>
+            
+            <form id="resetPasswordForm">
+                <div class="form-group">
+                    <input type="email" class="input-field1" id="reset-email" placeholder="Votre adresse email" required>
+                </div>
+                <button type="submit" class="modal-btn">RÉINITIALISER LE MOT DE PASSE</button>
+            </form>
+            
+            <div class="success-message" id="successMessage">
+                <p>✓ Un email de réinitialisation a été envoyé à votre adresse.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../public/js/connexionDb.js" type="module"></script>
+    <script src="../public/js/connexion.js"></script>
+</body>
+</html>

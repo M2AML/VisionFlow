@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des événements</title>
+    <link rel="stylesheet" href="../public/css/listeeve.css">
+
+</head>
+<body>
+    <!-- Menu Horizontal -->
+    <div class="horizontal-menu">
+        <div class="horizontal-menu-items">
+            <div class="project">Liste des événements</div>
+            <a href="/"><button class="menu-item active">Retour</button></a>
+        </div>
+    </div>
+
+    <div class="layout">
+        <!-- Menu Vertical -->
+        <aside class="vertical-menu">
+            <div class="menu-section">
+                <div class="project-name">VisionFlow</div>
+                <div class="menu-link1">📝Liste des événements</div>
+                <a href="listepart"><div class="menu-link2">📝liste des participants</div></a>
+            </div>
+
+        
+        </aside>
+
+        <!-- Contenu Principal -->
+        <div class="container">
+        <div class="events-grid">
+            <!-- Les événements seront injectés ici -->
+
+        </div>
+    </div>
+    </div>
+    
+    <!-- Modal pour modification -->
+<div id="edit-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <h2>Modifier l'événement</h2>
+        <form id="edit-form">
+            <div class="form-group">
+                <label for="edit-nom">Nom de l'événement</label>
+                <input type="text" id="edit-nom" required>
+            </div>
+            <div class="form-group">
+                <label for="edit-description">Description</label>
+                <textarea id="edit-description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="edit-lieu">Lieu</label>
+                <input type="text" id="edit-lieu" required>
+            </div>
+            <div class="form-group">
+                <label for="edit-nbre_de_places">Nombre de places</label>
+                <input type="number" id="edit-nbre_de_places" required>
+            </div>
+            <div class="form-group">
+                <label for="edit-date_debut">Date de début</label>
+                <input type="date" id="edit-date_debut" required>
+            </div>
+            <button class="save-btn" type="submit">Enregistrer</button>
+        </form>
+    </div>
+</div>
+
+    
+<script src="../public/js/listeeve.js" type="module"></script>
+
+</body>
+</html>
